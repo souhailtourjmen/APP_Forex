@@ -1,8 +1,768 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
 }
 
-a {
-  color: #00B7FF;
+.container {
+    display: flex;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+
+/*header*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    z-index: 100000;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px #192a56;
+}
+
+header .logo i {
+    color: #27ae60;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo span {
+    color: rgb(36, 35, 35);
+}
+
+header .navbar a {
+    padding: .5rem 1.5rem;
+    color: #666;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+}
+
+header .navbar a.active,
+header .navbar a:hover {
+    color: #fff;
+    background-color: #27ae60;
+}
+
+header .icons a {
+    cursor: pointer;
+    color: #192a56;
+    border-radius: 50%;
+    height: 4.5rem;
+    width: 4.5rem;
+    font-size: 1.7rem;
+    text-align: center;
+    background-color: #eee;
+    line-height: 4.5rem;
+}
+
+header .icons a:hover {
+    color: #eee;
+    background-color: #27ae60;
+    transform: rotate(360deg);
+}
+
+.input_container {
+    border-radius: 10px;
+    border: 1px solid #27ae60;
+    padding: 5px;
+}
+
+
+/*End header*/
+
+.Hamed {
+    display: flex;
+    width: 100%;
+    height: 35%;
+}
+
+
+/*Style boutonet Hamed*/
+
+#app-cover {
+    top: 50px;
+    right: 90px;
+    width: 300px;
+    height: 42px;
+    margin: 100px auto 0 auto;
+    z-index: 1;
+}
+
+#select-button {
+    position: relative;
+    height: 16px;
+    padding: 12px 14px;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#options-view-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#selected-value {
+    font-size: 16px;
+    line-height: 1;
+    margin-right: 26px;
+}
+
+.option i {
+    width: 16px;
+    height: 16px;
+}
+
+.option,
+.label {
+    color: #2d3667;
+    font-size: 16px;
+}
+
+#chevrons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 12px;
+    padding: 9px 14px;
+}
+
+#chevrons i {
+    display: block;
+    height: 50%;
+    color: #d1dede;
+    font-size: 12px;
+    text-align: right;
+}
+
+#options-view-button:checked+#select-button #chevrons i {
+    color: #2d3667;
+}
+
+.options {
+    position: absolute;
+    left: 0;
+    width: 250px;
+}
+
+#options {
+    position: absolute;
+    top: 42px;
+    right: 0;
+    left: 0;
+    width: 298px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+#options-view-button:checked~#options {
+    border: 1px solid #e2eded;
+    border-color: #eaf1f1 #e4eded #dbe7e7 #e4eded;
+}
+
+.option {
+    position: relative;
+    line-height: 1;
+    transition: 0.3s ease all;
+    z-index: 2;
+}
+
+.option i {
+    position: absolute;
+    left: 14px;
+    padding: 0;
+    display: none;
+}
+
+#options-view-button:checked~#options .option i {
+    display: block;
+    padding: 12px 0;
+}
+
+.label {
+    display: none;
+    padding: 0;
+    margin-left: 27px;
+}
+
+#options-view-button:checked~#options .label {
+    display: block;
+    padding: 12px 14px;
+}
+
+.s-c {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.s-c.top {
+    top: 0;
+}
+
+.s-c.bottom {
+    bottom: 0;
+}
+
+input[type="radio"] {
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.s-c:hover~i {
+    color: #fff;
+    opacity: 0;
+}
+
+.s-c:hover {
+    height: 100%;
+    z-index: 1;
+}
+
+.s-c.bottom:hover+i {
+    bottom: -25px;
+    animation: moveup 0.3s ease 0.1s forwards;
+}
+
+.s-c.top:hover~i {
+    top: -25px;
+    animation: movedown 0.3s ease 0.1s forwards;
+}
+
+@keyframes moveup {
+    0% {
+        bottom: -25px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes movedown {
+    0% {
+        top: -25px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.label {
+    transition: 0.3s ease all;
+}
+
+.opt-val {
+    position: absolute;
+    left: 14px;
+    width: 217px;
+    height: 21px;
+    opacity: 0;
+    background-color: #fff;
+    transform: scale(0);
+}
+
+.option input[type="radio"]:checked~.opt-val {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.option input[type="radio"]:checked~i {
+    top: 0;
+    bottom: auto;
+    opacity: 1;
+    animation: unset;
+}
+
+.option input[type="radio"]:checked~i,
+.option input[type="radio"]:checked~.label {
+    color: #fff;
+}
+
+.option input[type="radio"]:checked~.label:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#options-view-button:not(:checked)~#options .option input[type="radio"]:checked~.opt-val {
+    top: -30px;
+}
+
+.option:nth-child(1) input[type="radio"]:checked~.label:before {
+    background-color: #000;
+    border-radius: 4px 4px 0 0;
+}
+
+.option:nth-child(1) input[type="radio"]:checked~.opt-val {
+    top: -31px;
+}
+
+.option:nth-child(2) input[type="radio"]:checked~.label:before {
+    background-color: #ea4c89;
+}
+
+.option:nth-child(2) input[type="radio"]:checked~.opt-val {
+    top: -71px;
+}
+
+.option:nth-child(3) input[type="radio"]:checked~.label:before {
+    background-color: #0057ff;
+}
+
+.option:nth-child(3) input[type="radio"]:checked~.opt-val {
+    top: -111px;
+}
+
+.option:nth-child(4) input[type="radio"]:checked~.label:before {
+    background-color: #32c766;
+}
+
+.option:nth-child(4) input[type="radio"]:checked~.opt-val {
+    top: -151px;
+}
+
+.option:nth-child(5) input[type="radio"]:checked~.label:before {
+    background-color: #f48024;
+}
+
+.option:nth-child(5) input[type="radio"]:checked~.opt-val {
+    top: -191px;
+}
+
+.option:nth-child(6) input[type="radio"]:checked~.label:before {
+    background-color: #006400;
+    border-radius: 0 0 4px 4px;
+}
+
+.option:nth-child(6) input[type="radio"]:checked~.opt-val {
+    top: -231px;
+}
+
+.option .fa-codepen {
+    color: #000;
+}
+
+.option .fa-dribbble {
+    color: #ea4c89;
+}
+
+.option .fa-behance {
+    color: #0057ff;
+}
+
+.option .fa-hackerrank {
+    color: #32c766;
+}
+
+.option .fa-stack-overflow {
+    color: #f48024;
+}
+
+.option .fa-free-code-camp {
+    color: #006400;
+}
+
+#option-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    transition: 0.3s ease all;
+    z-index: 1;
+    display: none;
+}
+
+#options-view-button:checked~#options #option-bg {
+    display: block;
+}
+
+.option:hover .label {
+    color: #fff;
+}
+
+.option:nth-child(1):hover~#option-bg {
+    top: 0;
+    background-color: #000;
+    border-radius: 4px 4px 0 0;
+}
+
+.option:nth-child(2):hover~#option-bg {
+    top: 40px;
+    background-color: #ea4c89;
+}
+
+.option:nth-child(3):hover~#option-bg {
+    top: 80px;
+    background-color: #0057ff;
+}
+
+.option:nth-child(4):hover~#option-bg {
+    top: 120px;
+    background-color: #32c766;
+}
+
+.option:nth-child(5):hover~#option-bg {
+    top: 160px;
+    background-color: #f48024;
+}
+
+.option:nth-child(6):hover~#option-bg {
+    top: 200px;
+    background-color: #006400;
+    border-radius: 0 0 4px 4px;
+}
+
+
+/* style table */
+
+#Cour_dechange {
+    padding: 15rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.header_fixed {
+    max-height: 100vh;
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #dddddd;
+}
+
+.header_fixed thead th {
+    position: sticky;
+    top: 0;
+    background-color: #27ae60;
+    color: #e6e7e8;
+    font-size: 15px;
+}
+
+th,
+td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+td img {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    border: 5px solid #e6e7e8;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+    background-color: #edeef1;
+}
+
+tr:hover td {
+    color: #44b478;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+td form input {
+    border: none;
+    padding: 7px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: #e6e7e8;
+    cursor: pointer;
+}
+
+
+/*Cantact us*/
+
+.contact form {
+    height: 50%;
+    width: 50%;
+    padding: 30px;
+    background-color: hsla(0, 35%, 93%, 0.705);
+    border-radius: 10px;
+    position: relative;
+    left: 375px;
+    margin-bottom: 50px;
+    box-shadow: 5px 10px 8px 10px #888888;
+}
+
+form h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+form .separation {
+    width: 100%;
+    height: 1px;
+    background-color: #27ae60;
+}
+
+form .corps-formulaire {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+form .corps-formulaire .groupe {
+    position: relative;
+    /* Pour mettre positionner l’élément dans le flux normal de la page */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form .corps-formulaire .gauche .groupe input {
+    margin-top: 5px;
+    padding: 10px 5px 10px 30px;
+    border: 1px solid #c9c9c9;
+    outline-color: #747cdf;
+    border-radius: 5px;
+}
+
+form .corps-formulaire .gauche .groupe i {
+    position: absolute;
+    /* positionné par rapport à son parent le plus proche positionné */
+    left: 0;
+    top: 25px;
+    padding: 9px 8px;
+    color: #27ae60;
+}
+
+form .corps-formulaire .droite {
+    margin-left: 40px;
+}
+
+form .corps-formulaire .droite .groupe {
+    height: 100%;
+    width: 100%;
+}
+
+form .corps-formulaire .droite .groupe textarea {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 2px solid #27ae60;
+    outline: none;
+    border-radius: 5px;
+    resize: none;
+    height: 72%;
+}
+
+form .pied-formulaire button {
+    margin-top: 10px;
+    background-color: #27ae60;
+    color: white;
+    font-size: 15px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.5s;
+    /*align-items: center;*/
+}
+
+form .pied-formulaire button:hover {
+    transform: scale(1.05);
+}
+
+
+/* end Cantact us*/
+
+
+/*footer*/
+
+footer {
+    height: auto;
+    width: 100%;
+    background-color: #111;
+    font-family: " open sans";
+    padding-top: 40px;
+    color: #fff;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-container h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-container p {
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.social a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.social a img {
+    filter: grayscale(1);
+}
+
+.social a:hover img {
+    filter: grayscale(0);
+}
+
+.footer-bottom {
+    background-color: #000;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+
+/*#footer {
+    background-color: #131414;
+    text-align: center;
+}
+
+#footer .footer {
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    align-items: center;
+}
+
+#footer .footer .brand h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+#footer .footer h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .footer h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+#footer .footer .social-icon {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+#footer .social-item {
+    height: 50%;
+    width: 50%;
+    margin-bottom: 0 5px;
+    padding: 20px;
+}
+
+#footer p {
+    color: white;
+    font-size: 1.3rem;
+}
+*/
+
+
+/*End footer*/
+
+@media(max-width:620px) {
+    .contact-address {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:500px) {
+    .contact-form .container {
+        width: 90%;
+    }
+    .contact-form .container div {
+        flex-direction: column;
+    }
+    .contact-form .container div:nth-child(1) span {
+        width: 100%;
+        margin-top: 20px;
+    }
 }

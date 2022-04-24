@@ -1,11 +1,223 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Forex</title>
+    <link rel="icon shortcut" type="icon" href="/images/forex.png" />
+</head>
+
+<body>
+    <!-- header section starts      -->
+    <header>
+        <a href="#cour_dechange" class="logo"><span><img src=/images/forex.png></span></a>
+
+        <nav class="navbar">
+            <a href="#Cour de change">Cour de change</a>
+
+            <a href="#price_change"> price_change</a>
+            <a href="#Localisation banque"> Localisation banque</a>
+            <a href="#Menu">Contact banque</a>
+            <a href="#Review">Faq</a>
+            <a href="#cantact">Contact</a>
+        </nav>
+        <div class="icons">
+            <!-- <i class="fas fa-bars" id="menu-bars"></i> -->
+            <div class="input_container">
+                <input type="text" placeholder="Search" color="#eeeee4" />
+                <a class="fas fa-search" id="search-icon"></a>
+            </div>
+
+        </div>
+    </header>
+    <!-- section hamed abir roudibelek etmechiha -->
+    <section class="Hamed">
+        <form id="app-cover">
+            <div id="select-box">
+                <input type="checkbox" id="options-view-button">
+                <div id="select-button" class="brd">
+                    <div id="selected-value">
+                        <span>Select a Bank</span>
+                    </div>
+                    <div id="chevrons">
+                        <i class="fas fa-chevron-up"></i>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                <div id="options">
+                    <div class="option">
+                        <input class="s-c top" type="radio" name="platform" value="STB_Bank">
+                        <input class="s-c bottom" type="radio" name="platform" value="STB_Bank">
+                        <i class="fab fa-codepen"></i>
+                        <span class="label">STB_Bank</span>
+                        <span class="opt-val">STB_Bank</span>
+                    </div>
+                    <div class="option">
+                        <input class="s-c top" type="radio" name="platform" value="BIAT_BANK">
+                        <input class="s-c bottom" type="radio" name="platform" value="BIAT_BANK">
+                        <i class="fab fa-dribbble"></i>
+                        <span class="label">BIAT_BANK</span>
+                        <span class="opt-val">BIAT_BANK</span>
+                    </div>
+                    <div class="option">
+                        <input class="s-c top" type="radio" name="platform" value="ATB_BANK">
+                        <input class="s-c bottom" type="radio" name="platform" value="ATB_BANK">
+                        <i class="fab fa-behance"></i>
+                        <span class="label">ATB_BANK</span>
+                        <span class="opt-val">ATB_BANK</span>
+                    </div>
+                    <div class="option">
+                        <input class="s-c top" type="radio" name="platform" value="hackerrank">
+                        <input class="s-c bottom" type="radio" name="platform" value="hackerrank">
+                        <i class="fab fa-hackerrank"></i>
+                        <span class="label">HackerRank</span>
+                        <span class="opt-val">HackerRank</span>
+                    </div>
+                    <div class="option">
+                        <input class="s-c top" type="radio" name="platform" value="stackoverflow">
+                        <input class="s-c bottom" type="radio" name="platform" value="stackoverflow">
+                        <i class="fab fa-stack-overflow"></i>
+                        <span class="label">StackOverflow</span>
+                        <span class="opt-val">StackOverflow</span>
+                    </div>
+                    <div class="option">
+                        <input class="s-c top" type="radio" name="platform" value="freecodecamp">
+                        <input class="s-c bottom" type="radio" name="platform" value="freecodecamp">
+                        <i class="fab fa-free-code-camp"></i>
+                        <span class="label">FreeCodeCamp</span>
+                        <span class="opt-val">FreeCodeCamp</span>
+                    </div>
+                    <div id="option-bg"></div>
+                </div>
+            </div>
+        </form>
+
+    </section>
+    <!-- header section ends-->
+    <section class="" id="Cour_dechange">
+        <div class="header_fixed">
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Code Devise</th>
+                        <th>Image</th>
+                        <th>Unite Devise</th>
+                        <th>Coût de Vente</th>
+                        <th>Coût d'Achat</th>
+                        <th>Banque</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (var i = 0; i <5;i++) { %>
+                        <tr>
+                            <td>USD</td>
+                            <td><img src=https://www.pngmart.com/files/7/USD-Transparent-Images-PNG.png /></td>
+                            <td>1</td>
+                            <td>3.05</td>
+                            <td>2.98</td>
+                            <td>
+                                <form action="https://www.stb.com.tn/fr/">
+                                    <input type="submit" value="STB_Bank" />
+                                </form>
+                            </td>
+                        </tr>
+                        <% } %>
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </section>
+
+    <!-- contact us -->
+    <div class="contact">
+        <form id="cantact">
+            <h1>Contactez-nous</h1>
+            <div class="separation"></div>
+            <div class="corps-formulaire">
+                <div class="gauche">
+                    <div class="groupe">
+                        <label>Votre Prénom</label>
+                        <input type="text" autocomplete="off" placeholder="Prénom" />
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="groupe">
+                        <label>Votre adresse e-mail</label>
+                        <input type="text" autocomplete="off" placeholder="adresse e-mail" />
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="groupe">
+                        <label>Votre téléphone</label>
+                        <input type="text" autocomplete="off" placeholder="téléphone" />
+                        <i class="fas fa-mobile"></i>
+                    </div>
+                </div>
+
+                <div class="droite">
+                    <div class="groupe">
+                        <label>Message</label>
+                        <textarea placeholder="Saisissez ici..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pied-formulaire">
+                <button>Envoyer le message</button>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- end contact us -->
+
+
+    <!-- Slider -->
+    <!-- End Slider  -->
+
+    <!-- footer  -->
+    <footer>
+        <div class="footer-container">
+            <h3>Forex</h3>
+            <p>Your Complete trading Solution</p>
+            <div class="social">
+                <a href=""> <img src="https://img.icons8.com/glyph-neue/64/26e07f/facebook-circled.png" /></a>
+                <a href=""> <img src="https://img.icons8.com/glyph-neue/64/26e07f/instagram-new.png" /></a>
+                <a href=""><img src="https://img.icons8.com/glyph-neue/64/26e07f/twitter.png" /></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2022 Forex. All rights reserved</p>
+        </div>
+    </footer>
+    <!-- <section id="footer">
+        <div class="footer container">
+            <div class="brand">
+                <h1>Forex</h1>
+            </div>
+            <h2>Your Complete trading Solution</h2>
+            <h3>Follow Us on</h3>
+            <div class="social-icon">
+                <div class="social-item">
+                    <a href=""><img src="https://img.icons8.com/ios-filled/50/000000/facebook-new.png" /></a>
+                </div>
+                <div class="social-item">
+                    <a href=""><img src="https://img.icons8.com/ios-filled/50/000000/gmail.png" /> </a>
+                </div>
+                <div class="social-item">
+                    <a href="#"><img src="https://img.icons8.com/windows/64/000000/twitter.png" /></a>
+                </div>
+            </div>
+            <p>Copyright © 2022 Forex. All rights reserved</p>
+        </div>
+
+    </section> -->
+    <!--End  footer  -->
+</body>
+
 </html>
