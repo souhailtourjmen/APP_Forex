@@ -93,93 +93,114 @@ header .icons .input_container a:hover {
 
 
 /*End header*/
+
+
 /*home*/
-#home .home{
+
+#home .home {
     padding-top: 10rem;
-    
-   background-image: url(../images/background-photo.jpg);
+    background-image: url(../images/background-photo.jpg);
     height: 45.8vw;
     width: 100vw;
-   background-size: cover;
+    background-size: cover;
     background-position: top center;
     position: relative;
-    z-index:1 ;
-    font-family:"Montserrat",sans-serif ;   
-
+    z-index: 1;
+    font-family: "Montserrat", sans-serif;
 }
-#home .home::after{
-    content:'' ;
+
+#home .home::after {
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
-    width:100%;
+    width: 100%;
     background-color: black;
     opacity: .7;
-    z-index:-1 ;
-  
+    z-index: -1;
 }
-#home .home .left h1{
-    padding-top:10rem ;
+
+#home .home .left h1 {
+    padding-top: 10rem;
     padding-left: 10rem;
     color: white;
     font-size: 70px;
     font-weight: 500;
 }
-#home .home .left h1 span{
+
+#home .home .left h1 span {
     color: #27ae60;
 }
-#home .home .left h2{
+
+#home .home .left h2 {
     padding-left: 10rem;
-    padding-top:2rem ;
+    padding-top: 2rem;
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     letter-spacing: 1rem;
     font-weight: 500;
     text-align: left;
-    z-index:100000 ;
+    z-index: 100000;
     color: #27ae60;
 }
-#home .home .left p{
+
+#home .home .left p {
     padding-left: 10rem;
-    padding-top:2rem ;
+    padding-top: 2rem;
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
     font-weight: 300;
     text-align: left;
-    z-index:100000 ;
+    z-index: 100000;
     color: white;
 }
 
+
 /*End home*/
+
 
 /*Style */
 
 .Cour_dechange {
-    
-    display: flex;
-    width: 50%;
+    padding-top: 5rem;
+    width: 100vw;
     height: 100%;
-    padding: 50px;
-    border: 1px solid red;
-    margin: auto;
-    padding: 15rem;
+    position: relative;
+    z-index: 1;
+    background-color: rgb(241, 241, 241);
+    font-family: "Montserrat", sans-serif;
 }
 
 .content_desc {
-    margin: 50%;
+    left: 30px;
+    bottom: 40px;
+    position: relative;
+}
+
+.content_desc h1 {
+    padding-top: 10rem;
+    padding-left: 10rem;
+    color: rgb(21, 20, 20);
+    font-size: 50px;
+    font-weight: 200;
 }
 
 .content_flags {
-    top: 15px;
-    align-items: center;
+    width: 900px;
+    height: 900px;
+    /* border: 1px solid #c3c3c3; */
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-left: 25%;
 }
 
 .flag {
-    margin: 10px;
+    margin: 55px;
     border: 1px solid #ccc;
     float: left;
-    width: 50px;
+    width: 83px;
 }
 
 .flag:hover {
@@ -187,7 +208,7 @@ header .icons .input_container a:hover {
 }
 
 div.flag img {
-    width: 100%;
+    width: 80px;
     height: auto;
 }
 
@@ -199,6 +220,8 @@ div.flag desc {
 
 /* style table */
 
+
+/* 
 table {
     width: 100%;
     border-collapse: collapse;
@@ -254,7 +277,7 @@ td form input {
     background-color: black;
     color: #e6e7e8;
     cursor: pointer;
-}
+} */
 
 
 /*Cantact us*/
@@ -366,7 +389,7 @@ form .pied-formulaire button:hover {
 footer {
     width: 100%;
     height: 10%;
-    margin-top: 15rem;
+    /* margin-top: 1px; */
     background-color: #111;
     font-family: " open sans";
     padding-top: 40px;
@@ -443,7 +466,7 @@ footer {
     left: 45rem;
 }
 
-.logincontainer{
+.logincontainer {
     position: relative;
     max-width: 430px;
     width: 100%;
@@ -454,7 +477,7 @@ footer {
     margin: 0 20px;
 }
 
-.logincontainer .forms{
+.logincontainer .forms {
     display: flex;
     align-items: center;
     height: 440px;
@@ -462,39 +485,40 @@ footer {
     transition: height 0.2s ease;
 }
 
-
-.logincontainer .form{
+.logincontainer .form {
     width: 50%;
     padding: 30px;
     background-color: #fff;
     transition: margin-left 0.18s ease;
 }
 
-.logincontainer.active .login{
+.logincontainer.active .login {
     margin-left: -50%;
     opacity: 0;
     transition: margin-left 0.18s ease, opacity 0.15s ease;
 }
 
-.logincontainer .signup{
+.logincontainer .signup {
     opacity: 0;
     transition: opacity 0.09s ease;
 }
-.logincontainer.active .signup{
+
+.logincontainer.active .signup {
     opacity: 1;
     transition: opacity 0.2s ease;
 }
 
-.logincontainer.active .forms{
+.logincontainer.active .forms {
     height: 600px;
 }
-.logincontainer .form .title{
+
+.logincontainer .form .title {
     position: relative;
     font-size: 27px;
     font-weight: 600;
 }
 
-.form .title::before{
+.form .title::before {
     content: '';
     position: absolute;
     left: 0;
@@ -505,14 +529,14 @@ footer {
     border-radius: 25px;
 }
 
-.form .input-field{
+.form .input-field {
     position: relative;
     height: 50px;
     width: 100%;
     margin-top: 30px;
 }
 
-.input-field input{
+.input-field input {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -525,11 +549,12 @@ footer {
     transition: all 0.2s ease;
 }
 
-.input-field input:is(:focus, :valid){
+.input-field input:is(:focus,
+ :valid) {
     border-bottom-color: #27ae60;
 }
 
-.input-field i{
+.input-field i {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -538,54 +563,57 @@ footer {
     transition: all 0.2s ease;
 }
 
-.input-field input:is(:focus, :valid) ~ i{
+.input-field input:is(:focus,
+ :valid)~i {
     color: #27ae60;
 }
 
-.input-field i.icon{
+.input-field i.icon {
     left: 0;
 }
-.input-field i.showHidePw{
+
+.input-field i.showHidePw {
     right: 0;
     cursor: pointer;
     padding: 10px;
 }
 
-.form .checkbox-text{
+.form .checkbox-text {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.checkbox-text .checkbox-content{
+.checkbox-text .checkbox-content {
     display: flex;
     align-items: center;
 }
 
-.checkbox-content input{
+.checkbox-content input {
     margin: 0 8px -2px 4px;
     accent-color: #27ae60;
 }
 
-.form .text{
+.form .text {
     color: #333;
     font-size: 14px;
 }
 
-.form a.text{
+.form a.text {
     color: #27ae60;
     text-decoration: none;
 }
-.form a:hover{
+
+.form a:hover {
     text-decoration: underline;
 }
 
-.form .button{
+.form .button {
     margin-top: 35px;
 }
 
-.form .button input{
+.form .button input {
     border: none;
     color: #fff;
     font-size: 17px;
@@ -597,14 +625,16 @@ footer {
     transition: all 0.3s ease;
 }
 
-.button input:hover{
+.button input:hover {
     background-color: #27ae60;
 }
 
-.form .login-signup{
+.form .login-signup {
     margin-top: 30px;
     text-align: center;
 }
+
+
 /*registrton*/
 
 @media(max-width:620px) {
