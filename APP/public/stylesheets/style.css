@@ -95,7 +95,8 @@ header .icons .input_container a:hover {
 /*End header*/
 /*home*/
 #home .home{
-    padding-top: 15rem;
+    padding-top: 10rem;
+    
    background-image: url(../images/background-photo.jpg);
     height: 45.8vw;
     width: 100vw;
@@ -104,6 +105,7 @@ header .icons .input_container a:hover {
     position: relative;
     z-index:1 ;
     font-family:"Montserrat",sans-serif ;   
+
 }
 #home .home::after{
     content:'' ;
@@ -122,6 +124,7 @@ header .icons .input_container a:hover {
     padding-left: 10rem;
     color: white;
     font-size: 70px;
+    font-weight: 500;
 }
 #home .home .left h1 span{
     color: #27ae60;
@@ -142,7 +145,7 @@ header .icons .input_container a:hover {
     padding-top:2rem ;
     font-family: 'Poppins', sans-serif;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 300;
     text-align: left;
     z-index:100000 ;
     color: white;
@@ -153,6 +156,7 @@ header .icons .input_container a:hover {
 /*Style */
 
 .Cour_dechange {
+    
     display: flex;
     width: 50%;
     height: 100%;
