@@ -66,7 +66,7 @@ header .navbar a:hover {
     background-color: #27ae60;
 }
 
-header .icons a {
+header .icons .input_container a {
     cursor: pointer;
     color: #192a56;
     border-radius: 50%;
@@ -78,7 +78,7 @@ header .icons a {
     line-height: 4.5rem;
 }
 
-header .icons a:hover {
+header .icons .input_container a:hover {
     color: #eee;
     background-color: #27ae60;
     transform: rotate(360deg);
@@ -258,7 +258,7 @@ form .corps-formulaire .gauche .groupe i {
 }
 
 form .corps-formulaire .droite {
-    margin-left: 40px;
+    margin-left: 80px;
 }
 
 form .corps-formulaire .droite .groupe {
@@ -275,6 +275,7 @@ form .corps-formulaire .droite .groupe textarea {
     border-radius: 5px;
     resize: none;
     height: 72%;
+    width: 100%;
 }
 
 form .pied-formulaire button {
@@ -288,7 +289,8 @@ form .pied-formulaire button {
     outline: none;
     cursor: pointer;
     transition: transform 0.5s;
-    /*align-items: center;*/
+    position: relative;
+    left: 200px;
 }
 
 form .pied-formulaire button:hover {
