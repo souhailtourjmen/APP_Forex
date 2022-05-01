@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
 * {
     font-family: 'Nunito', sans-serif;
     margin: 0;
@@ -92,7 +93,62 @@ header .icons .input_container a:hover {
 
 
 /*End header*/
+/*home*/
+#home .home{
+    padding-top: 15rem;
+   background-image: url(../images/background-photo.jpg);
+    height: 45.8vw;
+    width: 100vw;
+   background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index:1 ;
+    font-family:"Montserrat",sans-serif ;   
+}
+#home .home::after{
+    content:'' ;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:100%;
+    background-color: black;
+    opacity: .7;
+    z-index:-1 ;
+  
+}
+#home .home .left h1{
+    padding-top:10rem ;
+    padding-left: 10rem;
+    color: white;
+    font-size: 70px;
+}
+#home .home .left h1 span{
+    color: #27ae60;
+}
+#home .home .left h2{
+    padding-left: 10rem;
+    padding-top:2rem ;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    letter-spacing: 1rem;
+    font-weight: 500;
+    text-align: left;
+    z-index:100000 ;
+    color: #27ae60;
+}
+#home .home .left p{
+    padding-left: 10rem;
+    padding-top:2rem ;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: left;
+    z-index:100000 ;
+    color: white;
+}
 
+/*End home*/
 
 /*Style */
 
