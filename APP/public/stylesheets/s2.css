@@ -67,6 +67,27 @@
 .container_bureaux .tab_bureaux{
     text-align: left;
     margin-top: 5rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+.container_bureaux .tab_bureaux thead{
+    max-height: 100vh;
+    width: 100%;
+    overflow: auto;
+    border: 1px solid #dddddd;
+}
+thead th {
+    position: static;
+    top: 0;
+    background-color: #27ae60;
+    color: #e6e7e8;
+    font-size: 15px;
+}
+.container_bureaux .tab_bureaux th,
+.container_bureaux .tab_bureaux td {
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    font-size: 14px;
 }
 
 .container_bureaux .tab_bureaux td{
@@ -90,6 +111,7 @@
     color:black;
     font-style: italic;
 }
+
 /*End Page Change*/
 
 /*Page Banque*/
