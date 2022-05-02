@@ -5,130 +5,247 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Forex</title>
-    <link rel="icon shortcut" type="icon" href="/images/forex.png" />
+    <link rel="icon shortcut" type="icon" href="../images/forex.png" />
 </head>
 
 <body>
     <!-- header section starts      -->
     <header>
-        <a href="#cour_dechange" class="logo"><span><img src=/images/forex.png></span></a>
+        <a href="./index.html" class="logo"><span><img src=../images/forex.png></span></a>
 
         <nav class="navbar">
-            <a href="#Cour_dechange">Cour de change</a>
-            <a href="#price_change"> price_change</a>
-            <a href="#Localisationbanque"> Localisation banque</a>
-            <a href="#Contact_bank">Contact banque</a>
-            <a href="#Review">Faq</a>
-            <a href="#cantact">Contact</a>
+            <a href="./Devise.html">Devises</a>
+            <a href="../public/views/Banques.html">Banques</a>
+            <a href="./Change.html"> Bureaux de change</a>
+            <a href="./devisenocerculer.html">Devises non circulees</a>
+            <a href="./Faq.html">Faq</a>
+            <a href="./Contact.html">Nous Contact</a>
+            <a href="./Compte.html">Mon Compte</a>
         </nav>
         <div class="icons">
-            <!-- <i class="fas fa-bars" id="menu-bars"></i> -->
             <div class="input_container">
                 <input type="text" placeholder="Search" color="#eeeee4" />
                 <a class="fas fa-search" id="search-icon"></a>
+
             </div>
 
         </div>
     </header>
-    <!-- section hamed abir roudibelek etmechiha -->
-    <section class="price_change">
-
-
-    </section>
-    <!-- header section ends-->
-    <section class="" id="Cour_dechange">
-        <div class="header_fixed">
-            <table>
-                <thead>
-                    <tr>
-                        <th>
-                            Code Devise</th>
-                        <th>Image</th>
-                        <th>Unite Devise</th>
-                        <th>Coût de Vente</th>
-                        <th>Coût d'Achat</th>
-                        <th>Banque</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <% for (var i = 0; i <25;i++) { %>
-                        <tr>
-                            <td>USD</td>
-                            <td><img src=https://www.pngmart.com/files/7/USD-Transparent-Images-PNG.png /></td>
-                            <td>1</td>
-                            <td>3.05</td>
-                            <td>2.98</td>
-                            <td>
-                                <form action="https://www.stb.com.tn/fr/">
-                                    <input type="submit" value="STB_Bank" />
-                                </form>
-                            </td>
-                        </tr>
-                        <% } %>
-
-                </tbody>
-            </table>
-        </div>
-
-
-    </section>
-    <section class="Localisationbanque">
-
-
-    </section>
-    <section class="Contact_bank">
-
-
-    </section>
-    <section class="Contact">
-        <!-- contact us -->
-        <div class="contact">
-            <form id="cantact">
-                <h1>Contactez-nous</h1>
-                <div class="separation"></div>
-                <div class="corps-formulaire">
-                    <div class="gauche">
-                        <div class="groupe">
-                            <label>Votre Prénom</label>
-                            <input type="text" autocomplete="off" placeholder="Prénom" />
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="groupe">
-                            <label>Votre adresse e-mail</label>
-                            <input type="text" autocomplete="off" placeholder="adresse e-mail" />
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="groupe">
-                            <label>Votre téléphone</label>
-                            <input type="text" autocomplete="off" placeholder="téléphone" />
-                            <i class="fas fa-mobile"></i>
-                        </div>
-                    </div>
-
-                    <div class="droite">
-                        <div class="groupe">
-                            <label>Message</label>
-                            <textarea placeholder="Saisissez ici..."></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="pied-formulaire">
-                    <button>Envoyer le message</button>
-                </div>
-            </form>
+    <section id="home">
+        <div class="home">
+            <div class="left">
+                <h1><span>F</span>orex</h1>
+                <h2>Your Complete Trading Solution</h2>
+                <p>Plateforme des taux de change des devises étrangères en dinar tunisien émis par les banques et les bureaux de change en Tunisie</p>
+            </div>
         </div>
     </section>
+    <section class="Cour_dechange">
+
+        <div class="content_desc">
+            <h1>Taux de change des devises étrangères en Dinar Tunisian</h1>
+        </div>
+
+        <div class="content_flags">
+            <div class="flag">
+                <button>
+                    <img src="../images/flags/aed.png" alt="helloword">
+                    <div class="desc">
+                        <span><h4>AED</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button href="">
+                    <img src="../images/flags/bhd.png">
+                    <div class="desc">
+                        <span><h4>BHD</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/cad.png">
+                    <div class="desc">
+                        <span><h4>CAD</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/chf.png">
+                    <div class="desc">
+                        <span><h4>CHF</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/cny.png">
+                    <div class="desc">
+                        <span><h4>CNY</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/dkk.png">
+                    <div class="desc">
+                        <span><h4>DKK</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/dzd.png">
+                    <div class="desc">
+                        <span><h4>DZD</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/eur.png">
+                    <div class="desc">
+                        <span><h4>EUR</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/gbp.png">
+                    <div class="desc">
+                        <span><h4>GBP</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/jpy.png">
+                    <div class="desc">
+                        <span><h4>JPY</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/kwd.png">
+                    <div class="desc">
+                        <span><h4>KWD</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/lyd.png">
+                    <div class="desc">
+                        <span><h4>LYD</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/mad.png">
+                    <div class="desc">
+                        <span><h4>MAD</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/mro.png">
+                    <div class="desc">
+                        <span><h4>MRO</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flagS/nok.png">
+                    <div class="desc">
+                        <span><h4>NOK</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/qar.png">
+                    <div class="desc">
+                        <span><h4>QAR</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/sar.png">
+                    <div class="desc">
+                        <span><h4>SAR</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/sek.png">
+                    <div class="desc">
+                        <span><h4>SEK</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
+            <div class="flag">
+                <button id="">
+                    <img src="../images/flags/usd.png">
+                    <div class="desc">
+                        <span><h4>USD</h4></span>
+
+                    </div>
+
+                </button>
+            </div>
 
 
-    <!-- end contact us -->
+        </div>
 
-
-    <!-- Slider -->
-    <!-- End Slider  -->
+    </section>
 
     <!-- footer  -->
     <footer>
@@ -145,8 +262,6 @@
             <p>Copyright © 2022 Forex. All rights reserved</p>
         </div>
     </footer>
-
-    <!--End  footer  -->
 </body>
 
 </html>
