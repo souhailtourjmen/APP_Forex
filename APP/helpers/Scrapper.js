@@ -24,7 +24,7 @@ function run(sql) {
             meuiller.achat = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(1) > td:nth-child(4)").innerHTML;
             meuiller.imgbankA = document.querySelector("body > div:nth-child(6) > div:nth-child(4) > div.col-lg-4.col-md-4.col-sm-12.col-xs-12 > div > div:nth-child(2) > div:nth-child(3) > a > img").src;
 
-            for (let i = 0; i < 17; i++) {
+            for (let i = 0; i < 15; i++) { /*3indi probleme  lehna lazmou yetrigel*/
                 let courdechange = new Object();
                 courdechange.currency = "EUR";
                 courdechange.img_bank = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(1) > a > img").src;

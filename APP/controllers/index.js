@@ -1,7 +1,7 @@
 const Scrapper = require('../helpers/Scrapper.js');
 
 exports.index = function(req, res) {
-    res.render('index', {}); // render the index.ejs file
+    res.render('index.ejs', {}); // render the index.ejs file
 }
 
 exports.devise = async function(req, res) {

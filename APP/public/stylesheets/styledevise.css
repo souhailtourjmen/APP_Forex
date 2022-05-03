@@ -25,8 +25,9 @@
 }
 
 table {
-    margin-left: 5rem;
-    width: 90%;
+    text-align: left;
+    margin-top: 5rem;
+    width: 100%;
     border-collapse: collapse;
 }
 
