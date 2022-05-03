@@ -15,9 +15,9 @@ function run() {
         let data = await page.evaluate(() => {
             let datas = []
             let meuiller = new Object();
-            meuiller.vente = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(1) > td:nth-child(3)").innerHTML;
+            meuiller.vente = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(1) > td:nth-child(3)") ? .innerHTML;
             meuiller.imgbankV = document.querySelector("body > div:nth-child(6) > div:nth-child(4) > div.col-lg-4.col-md-4.col-sm-12.col-xs-12 > div > div:nth-child(2) > div:nth-child(2) > a > img").src;
-            meuiller.achat = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(1) > td:nth-child(4)").innerHTML;
+            meuiller.achat = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(1) > td:nth-child(4)") ? .innerHTML;
             meuiller.imgbankA = document.querySelector("body > div:nth-child(6) > div:nth-child(4) > div.col-lg-4.col-md-4.col-sm-12.col-xs-12 > div > div:nth-child(2) > div:nth-child(3) > a > img").src;
             datas.push(meuiller);
             for (let i = 0; i < 15; i++) {

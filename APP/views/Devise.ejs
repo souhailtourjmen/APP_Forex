@@ -40,7 +40,7 @@
 
         <div class="title">
             <h1>Taux de change des devises étrangères en Dinar Tunisian
-
+                <%= currency %>
             </h1>
         </div>
         <div class="" id="courdechage">
@@ -61,7 +61,7 @@
                         <% allResults.forEach(function(result) {%>
                             <tr>
                                 <td>
-                                    <%= result.currency %>
+                                    <%= currency %>
                                 </td>
                                 <td><img src="<%= result.img_bank%>"></td>
                                 <td>

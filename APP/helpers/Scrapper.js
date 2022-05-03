@@ -1,8 +1,9 @@
 const puppeteer = require('puppeteer');
 const fs = require('fs');
-let URL = "https://www.dinartunisien.com/fr/devise/eur";
 
-function run() {
+
+function run(sql) {
+    let URL = "https://www.dinartunisien.com/fr/devise/" + sql;
     return new Promise(async(resolve, reject) => {
         /* Initiate the Puppeteer browser */
         const browser = await puppeteer.launch();
@@ -13,6 +14,9 @@ function run() {
 
         /* Run javascript inside of the page */
         let data = await page.evaluate(() => {
+            const content = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(1) > td:nth-child(3)");
+            if (!content) return { datas: [], meuiller: null, error: true };
+
             let datas = []
             let meuiller = new Object();
             meuiller.vente = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(1) > td:nth-child(3)").innerHTML;
@@ -38,7 +42,7 @@ function run() {
         // console.log(data);
         // fs.writeFile('./Stb_Bank.json', JSON.stringify(data), err => err ? console.log(err) : null);
         await browser.close();
-        return resolve({ allResults: data.datas, bestResult: data.meuiller });
+        return resolve({ allResults: data.datas, bestResult: data.meuiller, error: null });
     });
 
 }

@@ -6,9 +6,10 @@ exports.index = function(req, res) {
 
 exports.devise = async function(req, res) {
     try {
-        const { allResults, bestResult } = await Scrapper.run();
+        const { currency } = req.params;
+        const { allResults, bestResult } = await Scrapper.run(currency);
 
-        return res.render('Devise.ejs', { allResults, bestResult });
+        return res.render('Devise.ejs', { allResults, bestResult, currency });
     } catch (error) {
         console.log(error);
         return res.render('error.ejs', { message: "Oups", error });
