@@ -1,13 +1,12 @@
 var express = require('express');
 var router = express.Router();
-const scraped = require('./Scraped');
-/*run notre scraped*/
-scraped.run();
+const controller = require('../controllers/index');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Express' });
-});
+router.get('/Devise.html', controller.devise);
+
+router.get('/index.html', controller.index);
+router.get('/', controller.index);
 
 
 module.exports = router;

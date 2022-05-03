@@ -19,29 +19,26 @@ function run() {
             meuiller.imgbankV = document.querySelector("body > div:nth-child(6) > div:nth-child(4) > div.col-lg-4.col-md-4.col-sm-12.col-xs-12 > div > div:nth-child(2) > div:nth-child(2) > a > img").src;
             meuiller.achat = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(1) > td:nth-child(4)").innerHTML;
             meuiller.imgbankA = document.querySelector("body > div:nth-child(6) > div:nth-child(4) > div.col-lg-4.col-md-4.col-sm-12.col-xs-12 > div > div:nth-child(2) > div:nth-child(3) > a > img").src;
-            datas.push(meuiller);
-            for (let i = 0; i < 15; i++) {
+
+            for (let i = 0; i < 17; i++) {
                 let courdechange = new Object();
+                courdechange.currency = "EUR";
                 courdechange.img_bank = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(1) > a > img").src;
                 courdechange.date = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(2) > span").innerText;
-                courdechange.Vente = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(3)").innerText;
-                courdechange.Achat = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(4)").innerText;
+                courdechange.vente = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(3)").innerText;
+                courdechange.achat = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(4)").innerText;
                 // courdechange.Date_Cours = document.querySelector("#main-content > div > div > table > tbody > tr:nth-child(" + (i + 2) + ") > td.date-change").innerText;
                 datas.push(courdechange);
             }
             /* Returning an object filled with the scraped data */
-            return {
-                datas
-            }
-
+            return { datas, meuiller }
         });
 
         /* Outputting what we scraped */
         // console.log(data);
         // fs.writeFile('./Stb_Bank.json', JSON.stringify(data), err => err ? console.log(err) : null);
         await browser.close();
-        //console.log(dat);
-        return resolve(data);
+        return resolve({ allResults: data.datas, bestResult: data.meuiller });
     });
 
 }
