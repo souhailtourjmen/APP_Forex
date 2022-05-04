@@ -8,6 +8,8 @@ function run() {
         /* Initiate the Puppeteer browser */
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
+         // Configure the navigation timeout
+        await page.setDefaultNavigationTimeout(0);
 
         /* Go to the Sites bank page and wait for it to load */
         await page.goto(URL, { waitUntil: 'networkidle0' });
@@ -26,16 +28,16 @@ function run() {
             let element = document.querySelectorAll(" tbody");
             
             let i = 1;
-            for (let ele of element) { /*3indi probleme  lehna lazmou yetrigel*/
+            for (let i = 0; i <17;i++) { /*3indi probleme  lehna lazmou yetrigel*/
                 let courdechange = {};
                 courdechange.currency = "EUR";
-                courdechange.img_bank = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i) + ") > td:nth-child(1) > a > img")?.src;
-                courdechange.date = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i) + ") > td:nth-child(2) > span")?.innerText;
-                courdechange.vente = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i) + ") > td:nth-child(3)")?.innerText;
-                courdechange.achat = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i) + ") > td:nth-child(4)")?.innerText;
+                courdechange.img_bank = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i+1) + ") > td:nth-child(1) > a > img")?.src;
+                courdechange.date = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i+1) + ") > td:nth-child(2) > span")?.innerText;
+                courdechange.vente = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i+1) + ") > td:nth-child(3)")?.innerText;
+                courdechange.achat = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i+1) + ") > td:nth-child(4)")?.innerText;
                 // courdechange.Date_Cours = document.querySelector("#main-content > div > div > table > tbody > tr:nth-child(" + (i + 2) + ") > td.date-change").innerText;
                 datas.push(courdechange);
-                i++;
+                
             }
       
             /* Returning an object filled with the scraped data */
