@@ -39,7 +39,7 @@ table {
 }
 
 .header_fixed thead th {
-    position: relative;
+    position: static;
     margin-top: 15rem;
     background-color: #27ae60;
     color: #e6e7e8;

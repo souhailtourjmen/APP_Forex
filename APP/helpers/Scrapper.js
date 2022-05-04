@@ -8,6 +8,9 @@ function run(sql) {
         /* Initiate the Puppeteer browser */
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
+         // Configure the navigation timeout
+         await page.setDefaultNavigationTimeout(0);
+
 
         /* Go to the Sites bank page and wait for it to load */
         await page.goto(URL, { waitUntil: 'networkidle0' });
@@ -18,15 +21,15 @@ function run(sql) {
             // if (!content) return { datas: [], meuiller: null, error: true };
 
             let datas = []
-            let meuiller = new Object();
+            let meuiller = {};
             meuiller.vente = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(1) > td:nth-child(3)")?.innerHTML;
             meuiller.imgbankV = document.querySelector("body > div:nth-child(6) > div:nth-child(4) > div.col-lg-4.col-md-4.col-sm-12.col-xs-12 > div > div:nth-child(2) > div:nth-child(2) > a > img")?.src;
             meuiller.achat = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(1) > td:nth-child(4)")?.innerHTML;
             meuiller.imgbankA = document.querySelector("body > div:nth-child(6) > div:nth-child(4) > div.col-lg-4.col-md-4.col-sm-12.col-xs-12 > div > div:nth-child(2) > div:nth-child(3) > a > img")?.src;
             let element = document.querySelectorAll(" tbody");
             let i = 0;
-            for (let ele of element) { /*3indi probleme  lehna lazmou yetrigel*/
-                let courdechange = new Object();
+            for (let i=0; i <16; i++) { /*3indi probleme  lehna lazmou yetrigel*/
+                let courdechange = {};
                 courdechange.currency = "EUR";
                 courdechange.img_bank = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(1) > a > img")?.src;
                 courdechange.date = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(2) > span")?.innerText;
@@ -34,7 +37,7 @@ function run(sql) {
                 courdechange.achat = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(4)")?.innerText;
                 // courdechange.Date_Cours = document.querySelector("#main-content > div > div > table > tbody > tr:nth-child(" + (i + 2) + ") > td.date-change").innerText;
                 datas.push(courdechange);
-                i++;
+                
             }
             /* Returning an object filled with the scraped data */
             return { datas, meuiller }
