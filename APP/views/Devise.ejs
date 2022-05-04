@@ -38,8 +38,8 @@
     <section class="devise">
 
         <div class="title">
-            <h1>Taux de change des devises étrangères en Dinar Tunisian
-                <%= currency %>
+            <h1>Taux de change de  <%= currency %> en Dinar Tunisien en Tunisie
+               
             </h1>
         </div>
         <div class="" id="courdechage">
@@ -60,6 +60,7 @@
                         <% allResults.forEach(function(result) {%>
                             <tr>
                                 <td>
+                                    <% if(result.img_bank!='') {%> 
                                     <%= currency %>
                                 </td>
                                 <td><img src="<%= result.img_bank%>"></td>
@@ -73,13 +74,11 @@
                                     <%= result.achat%>
                                 </td>
                                 <td>
-                                    <button class="btn_tb" action="https://www.stb.com.tn/fr/">
-                                        <input type="submit" value="STB_Bank" />
-                                    </button>
+                                    <a href=""></a>
                                 </td>
                             </tr>
 
-                            <% }); %>
+                            <% }}); %>
 
                     </tbody>
                 </table>
