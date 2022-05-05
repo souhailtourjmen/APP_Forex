@@ -52,7 +52,6 @@
                         <tr>
                             <th>Banque</th>
                             <th>Nom Devise</th>
-                            <th>Image Devise</th>
                             <th>Coût de Vente</th>
                             <th>Coût d'Achat</th>
                             <th>Date</th>
@@ -61,7 +60,7 @@
                     <tbody>
                         <% allResults.forEach(function(result) {%>
                             <tr>
-                                <% if(result.img_bank!='') { %> 
+                    
                                 <td class="bank">
                                     <img src="<%= result.img_bank%>">
                                     
@@ -70,11 +69,7 @@
                                 <td class="imgdivise">  
                                     <img src="<%= str.img%>">
                                     <h4><%= str.nom %></h4>
-                                </td>
-                                <td>
-                                   
-                                </td>
-                               
+                                </td>   
                                 <td>
                                     <h3><%= result.vente %></h3>
                                 </td>
@@ -85,7 +80,7 @@
                                 <td>
                                     <%= result.date %>
                                 </td>
-                                <% } %> 
+                             
                             </tr>
                             <% }); %>
 
