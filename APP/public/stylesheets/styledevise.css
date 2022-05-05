@@ -23,15 +23,68 @@
     text-transform: capitalize;
     line-height: 10rem;
 }
+.cour{
+ display: relative;
+    height: 100%;
+    width:100%;
+    /* flex-direction: row; */
+    
+}
+.best_devise {
+   margin-left: 10px;
+   margin-top: 15px;
+    width: 30%; 
+    height: 50%;
+    border: 2px solid #44b478;
+    
+}h2{
+    padding: 2rem;
+    font-size: 20px;
+    text-align: center;
+   
+    color:  #0e0e0e;
+    
+}
+.boxed{
+    margin-top: 2rem;
+    text-align: center;
+    border: 2px solid #dddddd;
+}
+.vente{
+    padding: 1rem;
+    margin:15px;
+    background-color:#f8fbf9; 
+    color: #0e0e0e;
+    font-size: 15px;
+}img {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    border: 5px solid #e6e7e8;
+}
 
+.achat{
+    background-color:#f8fbf9; 
+    padding: 1rem;
+    margin:15px;
+    color: #0e0e0e;
+    font-size: 15px;
+}img {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    border: 5px solid #e6e7e8;
+}
 table {
     text-align: left;
-    margin-top: 5rem;
-    width: 100%;
+    margin-left: 15px;
+    width: 70%;
+    height: 100%;
     border-collapse: collapse;
 }
 
 .header_fixed {
+    display:flex;
     max-height: 100vh;
     width: 100%;
     overflow: auto;
@@ -59,6 +112,10 @@ td img {
     border-radius: 100%;
     border: 5px solid #e6e7e8;
 }
+td h3 {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
 
 tr:nth-child(even) {
     background-color: #dddddd;
@@ -73,12 +130,34 @@ tr:hover td {
     cursor: pointer;
     background-color: #ffffff;
 }
-
-td form input {
+.btt_bank {
     border: none;
     padding: 7px 20px;
     border-radius: 20px;
     background-color: black;
     color: #e6e7e8;
     cursor: pointer;
+}
+.bank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.bank img {
+    margin: 1rem;
+}
+.imgdivise{
+    
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.imgdivise h4 {
+    font-size: 1.5rem;
+    padding: 1rem;
+
+}
+.imgdivise img {
+    margin: 1rem;
 }

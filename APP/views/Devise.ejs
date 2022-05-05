@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../stylesheets/style.css">
-    <link rel="stylesheet" href="../stylesheets/s2.css">
+    <!-- <link rel="stylesheet" href="../stylesheets/s2.css"> -->
     <link rel="stylesheet" href="../stylesheets/styledevise.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Forex</title>
@@ -38,50 +38,73 @@
     <section class="devise">
 
         <div class="title">
-            <h1>Taux de change de  <%= currency %> en Dinar Tunisien en Tunisie
+            <h1>Taux de change de  <%= str.nom %> en Dinar Tunisien en Tunisie
                
             </h1>
         </div>
-        <div class="" id="courdechage">
+        <div class="cour">
+           
+         
             <div class="header_fixed">
+                
                 <table>
                     <thead>
                         <tr>
-                            <th>
-                                Code Devise</th>
-                            <th>Image</th>
-                            <th>Unite Devise</th>
+                            <th>Banque</th>
+                            <th>Nom Devise</th>
+                            <th>Image Devise</th>
                             <th>Coût de Vente</th>
                             <th>Coût d'Achat</th>
-                            <th>Banque</th>
+                            <th>Date</th>
                         </tr>
                     </thead>
                     <tbody>
                         <% allResults.forEach(function(result) {%>
                             <tr>
-                                <td>
-                                    <% if(result.img_bank!='') {%> 
-                                    <%= currency %>
+                                <% if(result.img_bank!='') { %> 
+                                <td class="bank">
+                                    <img src="<%= result.img_bank%>">
+                                    
+                                    <button  class="btt_bank" value="">helloword</button>
                                 </td>
-                                <td><img src="<%= result.img_bank%>"></td>
+                                <td class="imgdivise">  
+                                    <img src="<%= str.img%>">
+                                    <h4><%= str.nom %></h4>
+                                </td>
+                                <td>
+                                   
+                                </td>
+                               
+                                <td>
+                                    <h3><%= result.vente %></h3>
+                                </td>
+                                <td>
+                                   <h3><%= result.achat%></h3> 
+                                </td>
+                               
                                 <td>
                                     <%= result.date %>
                                 </td>
-                                <td>
-                                    <%= result.vente %>
-                                </td>
-                                <td>
-                                    <%= result.achat%>
-                                </td>
-                                <td>
-                                    <a href=""></a>
-                                </td>
+                                <% } %> 
                             </tr>
-
-                            <% }}); %>
+                            <% }); %>
 
                     </tbody>
                 </table>
+                <div class="best_devise">
+                    <h2>Meilleurs taux des banques</h2>
+                    <div class="boxed">
+                        <div class="vente">
+                            <img src="<%= bestResult.imgbankV%>">
+                            <h4><%= bestResult.vente %></h4>
+                        </div>
+                        <div class="achat">
+                            <img src="<%= bestResult.imgbankA%>">
+                            <h4><%= bestResult.achat %></h4>
+                        </div>
+        
+                    </div>
+                </div>
             </div>
 
 
