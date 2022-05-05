@@ -4,7 +4,6 @@ const controller = require('../controllers/index');
 
 /* GET home page. */
 router.get('/devises/:currency', controller.devise);
-
 router.get('/index.html', controller.index);
 router.get('/', controller.index);
 

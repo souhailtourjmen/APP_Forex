@@ -61,14 +61,20 @@
                         <% allResults.forEach(function(result) {%>
                              <% if(result.img_bank!=null) {%>   
                             <tr>
-                                <td class="bank">
-                                    <img src="<%= result.img_bank%>">
-                                    <a  href="https://www.amenbank.com.tn/"><h6><%=result.nom_bank %> </h6></a>
+                                <td >
+                                    <div class="bank">
+
+                                        <img src="<%= result.img_bank%>">
+                                        <a  href="https://www.amenbank.com.tn/"><h6><%=result.nom_bank %> </h6></a>
+                                    </div>
                                 </td>
 
-                                <td class="imgdivise">  
-                                    <img src="<%= str.img%>">
-                                    <h4><%= str.nom %></h4>
+                                <td >  
+                                    <div class="imgdivise">
+                                        <img src="<%= str.img%>">
+                                        <h4><%= str.nom %></h4>
+                                        
+                                    </div>
                                 </td>  
 
                                 <td>
@@ -93,11 +99,18 @@
                     <div class="boxed">
                         <div class="vente">
                             <img src="<%= bestResult.imgbankV%>">
-                            <h4><%= bestResult.vente %></h4>
+                            <div class="line">
+                                <h3>VENTE =</h3>
+                                <h4><%= bestResult.vente %></h4>
+                            </div>
                         </div>
                         <div class="achat">
                             <img src="<%= bestResult.imgbankA%>">
-                            <h4><%= bestResult.achat %></h4>
+                            <div class="line">
+                                <h3>ACHAT =</h3>
+                                <h4><%= bestResult.achat %></h4>
+                            </div>
+                           
                         </div>
         
                     </div>

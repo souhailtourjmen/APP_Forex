@@ -33,9 +33,10 @@
 .best_devise {
     width: 30%; 
     height: 50%;
+    margin-left: 10px;
     border: 2px solid #44b478;
     position: sticky;
-    top: 15px;
+    top: 0px;
     
 }h2{
     padding: 2rem;
@@ -62,6 +63,11 @@
     width: 60px;
     border-radius: 100%;
     border: 5px solid #e6e7e8;
+    margin: 2rem;
+}h3 ,h4{
+    display: inline;
+    /* padding: 0.5rem; */
+    margin-top: 1rem;
 }
 
 .achat{
@@ -75,6 +81,12 @@
     width: 60px;
     border-radius: 100%;
     border: 5px solid #e6e7e8;
+    margin: 2rem;
+
+}h3 ,h4{
+    display: inline;
+    /* padding: 0.5rem; */
+    margin: rem;
 }
 table {
     width: 70%;
@@ -92,7 +104,7 @@ table {
 .header_fixed thead th {
     position: sticky;
     top: 0;
-    background-color: black;
+    background-color: #44b478;
     color: #e6e7e8;
     font-size: 15px;
 }
@@ -102,6 +114,7 @@ td {
     border-bottom: 1px solid #dddddd;
     padding: 10px 20px;
     font-size: 14px;
+   
 }
 
 td img {
@@ -156,16 +169,18 @@ color: white;
     margin: 1rem;
 }
 .imgdivise{
-    
+    display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center;  */
     flex-direction: column;
 }
 .imgdivise h4 {
+    text-align: center;
     font-size: 1.5rem;
-    padding: 1rem;
+  margin-bottom:20px;
 
 }
 .imgdivise img {
- margin-left: 30%;
+    margin-top: 20%;
+ margin-left: 15%;
 }
