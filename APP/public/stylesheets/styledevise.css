@@ -125,7 +125,7 @@ tr:hover td {
     background-color: #ffffff;
 }
 
-td button {
+td a {
     border: none;
     padding: 7px 20px;
     border-radius: 20px;
@@ -149,6 +149,8 @@ td button {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}h6{
+color: white;
 }
 .bank img {
     margin: 1rem;
@@ -165,5 +167,5 @@ td button {
 
 }
 .imgdivise img {
-    margin: 1rem;
+ margin-left: 30%;
 }

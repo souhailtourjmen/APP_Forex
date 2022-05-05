@@ -30,7 +30,7 @@ function run(sql) {
             let i = 0;
             for (let i=0; i <16; i++) { /*3indi probleme  lehna lazmou yetrigel*/
                 let courdechange = {};
-                courdechange.currency = "EUR";
+                courdechange.nom_bank =document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(1) > a")?.getAttribute('title');
                 courdechange.img_bank = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(1) > a > img")?.src;
                 courdechange.date = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(2) > span")?.innerText;
                 courdechange.vente = document.querySelector("#banks-rates-tables > tbody > tr:nth-child(" + (i + 2) + ") > td:nth-child(3)")?.innerText;

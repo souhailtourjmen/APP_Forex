@@ -59,20 +59,22 @@
                     </thead>
                     <tbody>
                         <% allResults.forEach(function(result) {%>
+                             <% if(result.img_bank!=null) {%>   
                             <tr>
-                    
                                 <td class="bank">
                                     <img src="<%= result.img_bank%>">
-                                    
-                                    <button  class="btt_bank" value="">helloword</button>
+                                    <a  href="https://www.amenbank.com.tn/"><h6><%=result.nom_bank %> </h6></a>
                                 </td>
+
                                 <td class="imgdivise">  
                                     <img src="<%= str.img%>">
                                     <h4><%= str.nom %></h4>
-                                </td>   
+                                </td>  
+
                                 <td>
                                     <h3><%= result.vente %></h3>
                                 </td>
+
                                 <td>
                                    <h3><%= result.achat%></h3> 
                                 </td>
@@ -80,7 +82,7 @@
                                 <td>
                                     <%= result.date %>
                                 </td>
-                             
+                             <% } %>
                             </tr>
                             <% }); %>
 
