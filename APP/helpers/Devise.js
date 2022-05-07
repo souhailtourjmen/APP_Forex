@@ -173,8 +173,8 @@ function Nomdevise(devise) {/*fonction retourne nom devise et son image */
 }
 
 function unite(str) {/*fonction retourne unite de devise et convertie en entier */
-    str=parseFloat(str.substring(0,str.indexOf(" ")));
-    return str;
+    let stri=parseFloat(str.substring(0,str.indexOf(" ")));
+    return stri;
 }
 module.exports = {
     Nomdevise ,unite
