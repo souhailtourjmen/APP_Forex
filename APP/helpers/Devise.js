@@ -1,4 +1,7 @@
-function Nomdevise(devise) {
+/*c'est module qui contient des fonction pour utilse a la page de devise */
+
+
+function Nomdevise(devise) {/*fonction retourne nom devise et son image */
     let content={};
     switch (devise){
         case 'aed':{
@@ -168,6 +171,11 @@ function Nomdevise(devise) {
 
     }
 }
+
+function unite(str) {/*fonction retourne unite de devise et convertie en entier */
+    str=parseFloat(str.substring(0,str.indexOf(" ")));
+    return str;
+}
 module.exports = {
-    Nomdevise
+    Nomdevise ,unite
 }

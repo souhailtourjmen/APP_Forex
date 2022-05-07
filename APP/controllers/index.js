@@ -7,10 +7,10 @@ exports.index = function(req, res) {
 exports.devise = async function(req, res) {
     try {
         const { currency } = req.params;
-
-            const { allResults, bestResult } = await Scrapper.run(currency);
+            const { allResults, bestResult ,Convertir} = await Scrapper.run(currency);
             let str= nomdevise.Nomdevise(currency);
-            return res.render('Devise.ejs', { allResults, bestResult,str });
+            
+            return res.render('Devise.ejs', { allResults, bestResult,Convertir,str });
         }
        
       catch (error) {

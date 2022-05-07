@@ -1,7 +1,9 @@
 /* style table */
-
+body {
+    background-color: rgb(241, 241, 241);
+}
 .devise {
-    margin-top: 5%;
+
     padding-top: 5rem;
     width: 100vw;
     height: 100%;
@@ -33,7 +35,7 @@
 .best_devise {
     width: 30%; 
     height: 50%;
-    margin-left: 10px;
+    margin: 10px;
     border: 2px solid #44b478;
     position: sticky;
     top: 0px;
@@ -46,11 +48,63 @@
     color:  #0e0e0e;
     
 }
-.boxed{
-    margin-top: 2rem;
+.convertir{
+    margin: 2rem;
     text-align: center;
     border: 2px solid #dddddd;
+    box-shadow: 0px 0px 10px grey;
+
+}
+.conv{
+    margin: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.conv input {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    background-color:#f8fbf9;
+    color: #0e0e0e;
+}
+
+.conv img{
+    height: 40px;
+    width: 40px;
+    margin: 2rem;
+
+}
+.conv button{
+
+    cursor: pointer;
+}
+.conv img:hover{
    
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: #44b478;
+    transform: rotate(360deg);
+}
+.boxed{
+    margin: 2rem;
+    text-align: center;
+    border: 2px solid #dddddd;
+    box-shadow: 0px 0px 5px grey;
+}
+.boxed img {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    border: 5px solid #e6e7e8;
+    margin: 2rem;
+}
+.boxed h3 ,h4{
+    display: inline;
+    /* padding: 0.5rem; */
+    margin-top: 1rem;
 }
 .vente{
     padding: 1rem;
@@ -58,16 +112,6 @@
     background-color:#f8fbf9; 
     color: #0e0e0e;
     font-size: 15px;
-}img {
-    height: 60px;
-    width: 60px;
-    border-radius: 100%;
-    border: 5px solid #e6e7e8;
-    margin: 2rem;
-}h3 ,h4{
-    display: inline;
-    /* padding: 0.5rem; */
-    margin-top: 1rem;
 }
 
 .achat{
@@ -76,20 +120,11 @@
     margin:15px;
     color: #0e0e0e;
     font-size: 15px;
-}img {
-    height: 60px;
-    width: 60px;
-    border-radius: 100%;
-    border: 5px solid #e6e7e8;
-    margin: 2rem;
-
-}h3 ,h4{
-    display: inline;
-    /* padding: 0.5rem; */
-    margin: rem;
 }
 table {
+    margin:10px;
     width: 70%;
+    border: 2px solid #44b478;
     border-collapse: collapse;
 }
 
@@ -104,22 +139,25 @@ table {
 .header_fixed thead th {
     position: sticky;
     top: 0;
-    background-color: #44b478;
+    background-color: #090909;
     color: #e6e7e8;
     font-size: 15px;
 }
 
-th,
-td {
+th {
     border-bottom: 1px solid #dddddd;
     padding: 10px 20px;
     font-size: 14px;
    
 }
+td{
+    border-bottom: 1px solid #dddddd;
+    font-size: 14px;  
+}
 
 td img {
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     border-radius: 100%;
     border: 5px solid #e6e7e8;
 }
@@ -140,7 +178,7 @@ tr:hover td {
 
 td a {
     border: none;
-    padding: 7px 20px;
+    padding: 7px 10px;
     border-radius: 20px;
     background-color: black;
     color: #e6e7e8;
@@ -151,11 +189,11 @@ td a {
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow:  0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 ::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow:  0 0 6px rgba(0, 0, 0, 0.3);
 }
 .bank {
     display: flex;
@@ -165,22 +203,40 @@ td a {
 }h6{
 color: white;
 }
+.bank a{
+    margin-bottom:10px;
+}
 .bank img {
     margin: 1rem;
 }
 .imgdivise{
     display: flex;
     align-items: center;
-    /* justify-content: center;  */
+    justify-content: center; 
     flex-direction: column;
 }
 .imgdivise h4 {
     text-align: center;
     font-size: 1.5rem;
-  margin-bottom:20px;
+
 
 }
 .imgdivise img {
-    margin-top: 20%;
- margin-left: 15%;
+ margin-left: 10%;
+}
+.attantion{
+    margin: 5rem;
+    margin-left: 25%;
+    height: 50%;
+    width: 50%;
+    background-color: rgb(241, 241, 241);
+    font-family: "Montserrat", sans-serif;
+
+}
+.attantion p{
+    
+    font-size: 2rem;
+    padding: 10px;
+    text-align: center;
+    color: red !important;
 }

@@ -38,14 +38,10 @@
     <section class="devise">
 
         <div class="title">
-            <h1>Taux de change de  <%= str.nom %> en Dinar Tunisien en Tunisie
-               
-            </h1>
+            <h1>Taux de change de  <%= str.nom %> en Dinar Tunisien<span> chez les banques</span></h1>
         </div>
         <div class="cour">
-            <div class="convertisseur">
-                
-            </div>
+           
          
             <div class="header_fixed">
                 
@@ -95,15 +91,25 @@
                             <% }); %>
 
                     </tbody>
-                </table>
+                </table> 
                 <div class="best_devise">
-
-                    <h2>Convertir Dinar Tunisien vers <%= str.nom %>  chez </h2>
-                    <div calss="convertisser">
-
+                    <div class="convertir">
+                        <h2>Convertir Dinar Tunisien vers <%= str.nom %>   </h2>
+                        <div class="conv">
+                          
+                                <input type="text" placeholder="<%= Convertir.etranger %> " name="etranger" value="" onchange="conver()"/>
+                      
+                        
+                            <button id="change" ><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABmJLR0QA/wD/AP+gvaeTAAADrklEQVR4nO2avWsUQRiHn70kYKExojZqZRKwsIpaxT/AQs0JIsSgYEDUgIVgMEqMEfwIKDYqGkyhmIiBaHKx8B/QSu0EkWihQhQ/EKNd8M7ineXmltvdeDeze8vtA8vN7s47985v53sGUlJSUuqYhrgdWAIZ4CDQBryJ2ZdYOAIU1HU1Zl9i4ShFAepShAbgPqkI3KNUhGsmEm5EGpkeYJ2JBC3yFvgBrFb3J4A8cDLAJihv88AESAtbSPC1I0CAsLwdyAAbAxJIAssC3hVCbFsbPQ+eA8+q88caDnAYWKU9GwVyATYTiAibtWfbgU490jDFIjFswlMLOMBNSovvHaSO/y8l+fWWgFrEAW4hAyKXUeAY4UU8lEoUjJpuLGUekiGAo4WNZh5kHFDrPAD+qvAkBjMPyRCgADy0lXgSqoBVUgEi/r8mYC8wjixu/AF+q/C4etcUpUNRtgFdwBWgvcy7TerqAeaAfoJHeMaIogRkgMvADOUz76UdmAYuEYF/UQhwERjQ7r8BZ4EOYLm6OoAh9Q6k7z8NXIjAP6tzgS5kzu6mPwU0B8RvBh5r8fPAbsM+leTXZgloQuq8O5J7BOwDFgJsFpCGcFrdO8jyl7WG0aYAXRTr/FegF/miYeSBQ8B3dd+u0rKCTQGyWvg6wV/eyy9l45JIAbZq4ScV2Os226r0xRebAqzXwu8rsH/nk5ZRbAqgz9oc31j+6DZLaTsqwqYA81q4tQL7Ni38uUpffLEpwEstvKsCe93mRZW++GJTgBktfJzgAZCXFmXjYm1eYFOAHDKxAVgL3F3i/2VUXHcHaI6ECrCIzOrcxnAPMhpcGWDTggyF3X6/gGx9LVry0fpkKAeMaPdZpHsbojgZWgFsAc6pd/qgZwSYtelgFOsBg+p3AOna1gDn1eVHAcn8YEAcI0QxHc4DZ5CvPxcSFxUnq2ys9f8uUa4IzQJPkSKeRYr9BvXuE/AKqTI5LNZ5L1Eviy8iawJTEf+vL+mqcNwOxI0NARxkdbebyiZBkWK6DfBuZTvI3l7NYrIElNvHt96NVYspAfwOMUwaSt8aJgRwgBuUZn4M6MPwVrYNvG1AJ3BKu3fP0vkV5XJf/guyBNZvyEfTdHof6BsFZc/SBSS2M8S21q/hDOELlkHFuOa7uRA+OEg7sJ/Ss3Qur5Fu7H+qwE/kCFut1/+PSENdNW4jaOIMX2IpJ8IYdSjCbUpF6I3VoxjwitAXrzvx4CC7u30k4xheSkpKSv3yD5QxLHJGU2qpAAAAAElFTkSuQmCC"/></button>
+                   
+                                <input type="text" placeholder="<%= Convertir.dinar %> " name="dinar" value="" onchange="conver()"/>
+                    
+                       
                     </div>
-                    <h2>Meilleurs taux des banques</h2>
+                    </div>
+                   
                     <div class="boxed">
+                        <h2>Meilleurs taux des banques</h2>
                         <div class="vente">
                             <img src="<%= bestResult.imgbankV%>">
                             <div class="line">
@@ -122,11 +128,20 @@
         
                     </div>
                 </div>
+               
             </div>
 
-
+            <div class="attantion">
+                <p>
+                    * Le site ne peut garantir l'exactitude des taux de change affichés.
+                     Vous devez confirmer les taux actuels avant d'effectuer des transactions
+                      qui pourraient être affectées par les changements des taux de change.
+                </p>
+            </div>
         </div>
+       
     </section>
+    
     <!-- footer  -->
     <footer>
         <div class="footer-container">
