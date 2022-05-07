@@ -7,10 +7,16 @@ exports.index = function(req, res) {
 exports.devise = async function(req, res) {
     try {
         const { currency } = req.params;
+        if(currency.length>3){
+            return res.redirect('/'+currency);
+
+        }else{
             const { allResults, bestResult ,Convertir} = await Scrapper.run(currency);
             let str= nomdevise.Nomdevise(currency);
             
             return res.render('Devise.ejs', { allResults, bestResult,Convertir,str });
+        }
+            
         }
        
       catch (error) {
