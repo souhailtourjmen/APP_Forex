@@ -40,4 +40,3 @@ function mouseOut(){
 }
 
 
-// console.log(str);
