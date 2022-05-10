@@ -63,7 +63,7 @@ body {
     position: relative;
 }
 .conv input {
-    width: 200px;
+    width: 45%;
     height: 30px;
     border-radius: 5px;
     text-align: center;
