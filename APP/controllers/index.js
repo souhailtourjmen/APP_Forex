@@ -1,4 +1,5 @@
 const Scrapper = require('../helpers/Scrapper.js');
+const Banque = require('../helpers/Banque.js');
 const nomdevise = require('../helpers/Devise.js');
 
 exports.index = function(req, res) {
@@ -17,6 +18,17 @@ exports.devise = async function(req, res) {
             return res.render('Devise.ejs', { allResults, bestResult,Convertir,str });
         }
             
+        }
+       
+      catch (error) {
+        console.log(error);
+        return res.render('error.ejs', { message: "Oups", error });
+    }
+}
+exports.banque = async function(req, res) {
+    try {
+            const { allResults} = await Banque.run();
+            return res.render('Banque.ejs', {allResults});
         }
        
       catch (error) {

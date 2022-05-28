@@ -44,54 +44,57 @@
            
          
             <div class="header_fixed">
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Banque</th>
-                            <th>Nom Devise</th>
-                            <th>Coût de Vente</th>
-                            <th>Coût d'Achat</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <% allResults.forEach(function(result) {%>
-                             <% if(result.img_bank!=null) {%>   
-                            <tr>
-                                <td >
-                                    <div class="bank">
+                <% if(allResults[0].vente==undefined) { %>
+                        <h2>li n'ya pas de devise c'est momment</h2>
+                    <% }else{ %>  
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Banque</th>
+                                        <th>Nom Devise</th>
+                                        <th>Coût de Vente</th>
+                                        <th>Coût d'Achat</th>
+                                        <th>Date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <% allResults.forEach(function(result) {%>
+                                        <% if(result.img_bank!=null) {%>   
+                                        <tr>
+                                            <td >
+                                                <div class="bank">
 
-                                        <img src="<%= result.img_bank%>">
-                                        <a  href=""><h6><%=result.nom_bank %> </h6></a>
-                                    </div>
-                                </td>
+                                                    <img src="<%= result.img_bank%>">
+                                                    <a  href=""><h6><%=result.nom_bank %> </h6></a>
+                                                </div>
+                                            </td>
 
-                                <td >  
-                                    <div class="imgdivise">
-                                        <img src="<%= str.img%>">
-                                        <h4><%= str.nom %></h4>
+                                            <td >  
+                                                <div class="imgdivise">
+                                                    <img src="<%= str.img%>">
+                                                    <h4><%= str.nom %></h4>
+                                                    
+                                                </div>
+                                            </td>  
+
+                                            <td>
+                                                <h3><%= result.vente %></h3>
+                                            </td>
+
+                                            <td>
+                                            <h3><%= result.achat%></h3> 
+                                            </td>
                                         
-                                    </div>
-                                </td>  
+                                            <td>
+                                                <%= result.date %>
+                                            </td>
+                                        <% } %>
+                                        </tr>
+                                        <% }); %>
 
-                                <td>
-                                    <h3><%= result.vente %></h3>
-                                </td>
-
-                                <td>
-                                   <h3><%= result.achat%></h3> 
-                                </td>
-                               
-                                <td>
-                                    <%= result.date %>
-                                </td>
-                             <% } %>
-                            </tr>
-                            <% }); %>
-
-                    </tbody>
-                </table> 
+                                </tbody>
+                            </table> 
+                        <% } %> 
                 <div class="best_devise">
                     <div class="convertir">
                         <h2>Convertir <span id="right"><%= str.nom %></span> vers <span id="left">Dinar Tunisien</span>   </h2>

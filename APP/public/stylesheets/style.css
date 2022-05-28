@@ -166,8 +166,8 @@ header .icons .input_container a:hover {
     margin: 5em auto;
     max-width: 1000px;
     height: 80%;
-    background-color: #fff;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
+    background-color: rgb(251, 250, 250);
+    box-shadow: 0 0 10px 0 gray;
     font-family: "Montserrat", sans-serif;
 
 }
@@ -208,7 +208,7 @@ header .icons .input_container a:hover {
       transition: all 0.2s ease-in-out;
 }
 .flag img {
-    width: 80px;
+    width: 100px;
     height: auto;
 }
 

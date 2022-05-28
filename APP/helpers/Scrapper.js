@@ -53,7 +53,7 @@ function run(sql) {
         });
 
         /* Outputting what we scraped */
-         console.log(data);
+         console.log(data.datas[0].vente);
        
         await browser.close();
         return resolve({ allResults: data.datas, bestResult: data.meuiller,Convertir:data.convertisseur, error: null });

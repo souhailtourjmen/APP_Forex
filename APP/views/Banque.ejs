@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../stylesheets/style.css">
-    <link rel="stylesheet" href="../stylesheets/s2.css">
+    <link rel="stylesheet" href="../stylesheets/s3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Banque</title>
     <link rel="icon shortcut" type="icon" href="../images/forex.png" />
@@ -19,7 +19,7 @@
 
         <nav class="navbar">
 
-            <a href="./Banques.html">Banques</a>
+            <a href="./Banque">Banques</a>
             <a href="./Change.html"> Bureaux de change</a>
             <a href="./devisenocerculer.html">Devises non circulees</a>
             <a href="./Faq.html">Faq</a>
@@ -35,26 +35,24 @@
 
         </div>
     </header>
-    <section>
-        <div class="container_Banques">
-            <div class="title">
-                <h1>Cours de devises des banques en Tunisie</h1>
-            </div>
-            <div class="banques_list">
-                <div class="banques">
-                    <a href="https://www.bct.gov.tn/bct/siteprod/index.jsp"><img src="../images/Banques/banqueCentrale.png" alt="Banque Centrale de Tunisie" title="Banque Centrale de Tunisie"></a>
-                    <h2><a href="https://www.bct.gov.tn/bct/siteprod/index.jsp">Banque Centrale de Tunisie</a> </h2>
-                </div>
-                <div class="banques_atb">
-                    <a href="www.atb.tn"><img src="../images/Banques/ATB2.jpg" alt="ATB" title="Arab Tunisian Bank"></a>
-                    <h2><a href="www.atb.tn">Arab Tunisian Bank</a> </h2>
-                </div>
-                <div class="banques_atb">
-                    <a href="https://www.bh.com.tn/"><img src="../images/Banques/BH.png" alt="BH" title="Banque de l'Habitat"></a>
-                    <h2><a href="https://www.bh.com.tn/">Banque de l'Habitat</a> </h2>
-                </div>
-            </div>
+    <section class="list_banque">
+        <div class="content_desc">
+            <h1>Cours de devises des banques en Tunisie</h1>
+        </div>
 
+        <div class="content_flags">
+            <% allResults.forEach(function(result) {%>
+            <div class="flag">
+                <a href="">
+                    <img src="<%= result.img %> " alt="helloword">
+                    <div class="desc">
+                        <span><h4><%= result.Title %> </h4></span>
+
+                    </div>
+
+                </a>
+            </div>
+            <% }) %> 
         </div>
     </section>
 
