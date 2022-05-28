@@ -1,0 +1,25 @@
+
+.faq{
+    margin: 5em auto;
+    max-width: 1000px;
+    height: 80%;
+    background-color: rgb(251, 250, 250);
+    box-shadow: 0 0 10px 0 gray;
+    font-family: "Montserrat", sans-serif;
+}
+.objectif h1{
+    padding: 2rem;
+    text-align:center ;
+    color:#27ae60;
+    font-size: 3rem;
+    
+}ol{
+    margin: auto;
+    margin-left: 5%;
+    
+}li{
+    padding: 2rem;
+    font-size: 1.5rem;
+}h4{
+    color:darkgreen;
+}
